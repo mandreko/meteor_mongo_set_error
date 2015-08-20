@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <form name="newEnrollmentForm" class="form-horizontal" role="form" novalidate ng-submit="newEnrollmentForm.$valid && saveEnrollment(this)">
+
+        <h3 class="text-center"><i class="glyphicon glyphicon-user"></i> Student Information</h3>
+        <div class="row">
+            <div class="col-sm-6 col-lg-4" ng-class="{'has-error': newEnrollmentForm.first_name.$invalid && (newEnrollmentForm.$submitted || newEnrollmentForm.first_name.$touched)}">
+                <div class="form-group">
+                    <label class="col-md-4 control-label">First Name</label>
+                    <div class="col-md-8">
+                        <input type="text"
+                               name="first_name"
+                               class="form-control"
+                               placeholder="John"
+                               ng-model="newEnrollment.first_name"
+                               required>
+                        <span ng-show="newEnrollmentForm.$submitted || newEnrollmentForm.first_name.$touched">
+                            <span class="help-block" ng-show="newEnrollmentForm.first_name.$error.required">First Name is required.</span>
+                        </span>
+                    </div>
+               </div>
+            </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Save Enrollment</button>
+    </form>
+</div>

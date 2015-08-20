@@ -1,0 +1,1 @@
+angular.module('enrollment',['angular-meteor', 'ui.router']);

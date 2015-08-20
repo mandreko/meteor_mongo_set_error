@@ -1,0 +1,1 @@
+Enrollments = new Mongo.Collection("enrollments");
